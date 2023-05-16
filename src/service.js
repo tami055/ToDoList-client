@@ -1,13 +1,13 @@
 import axios from 'axios';
-import dotenv from 'dotenv';
-dotenv.config();
-// const apiUrl = process.env.REACT_APP_API
-// const apiClient = axios.create({
-//   baseURL:process.env.REACT_APP_API,
-// });
+// import dotenv from 'dotenv';
+// dotenv.config();
+const apiUrl = process.env.REACT_APP_API
+const apiClient = axios.create({
+  baseURL:process.env.REACT_APP_API,
+});
 
-// axios.defaults.baseURL = apiUrl;
-axios.defaults.baseURL = process.env.REACT_APP_API;
+axios.defaults.baseURL = apiUrl;
+// axios.defaults.baseURL = process.env.REACT_APP_API;
 
 axios.interceptors.response.use(
   response => response,
