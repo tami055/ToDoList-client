@@ -25,6 +25,7 @@ export default {
   },
 
   addTask: async(newtodo)=>{
+    console.log(apiUrl,'apiurl')
     const result = await axios.post(`/todoitems`,{name:newtodo,isComplete:false}) 
     return result.data;
   },
